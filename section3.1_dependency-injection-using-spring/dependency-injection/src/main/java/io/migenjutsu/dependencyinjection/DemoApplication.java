@@ -14,6 +14,11 @@ public class DemoApplication {
 
 		GreetingController controller = (GreetingController) ctx.getBean("greetingController");
 		controller.sayHello();
-	}
-
+	}	
 }
+
+
+// ApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
+
+// GreetingController controller = (GreetingController) ctx.getBean("greetingController");
+// controller.sayHello();

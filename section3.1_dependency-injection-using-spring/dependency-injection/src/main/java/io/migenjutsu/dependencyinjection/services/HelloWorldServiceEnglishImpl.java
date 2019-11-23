@@ -9,6 +9,13 @@ import org.springframework.stereotype.Component;
 public class HelloWorldServiceEnglishImpl implements HelloWorldService {
     @Override
     public String getGreeting() {
-        return "Hello World";
+        return "Hello World!";
     }
 }
+
+// @Component
+// @Profile("english")
+// @Override
+// public String getGreeting() {
+//     return "Hello World";
+// }
