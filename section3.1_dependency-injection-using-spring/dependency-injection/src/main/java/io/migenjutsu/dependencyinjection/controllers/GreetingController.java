@@ -7,7 +7,6 @@ import io.migenjutsu.dependencyinjection.services.HelloWorldService;
 
 @Controller
 public class GreetingController {
-
     private HelloWorldService helloWorldService;
 
     @Autowired
@@ -17,8 +16,22 @@ public class GreetingController {
 
     public String sayHello() {
         String greeting = helloWorldService.getGreeting();
-
         System.out.println(greeting);
         return greeting;
     }
 }
+
+
+// private HelloWorldService helloWorldService;
+
+// @Autowired
+// public void setHelloWorldService(HelloWorldService helloWorldService) {
+//     this.helloWorldService=helloWorldService;
+// }
+
+// public String sayHello() {
+//     String greeting = helloWorldService.getGreeting();
+
+//     System.out.println(greeting);
+//     return greeting;
+// }
