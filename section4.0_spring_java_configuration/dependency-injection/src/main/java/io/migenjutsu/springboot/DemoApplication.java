@@ -11,7 +11,8 @@ import org.springframework.context.annotation.ComponentScan;
 import io.migenjutsu.dependencyinjection.controllers.GreetingController;
 
 @SpringBootApplication
-@ComponentScan("io.migenjutsu.dependencyinjection")
+// @ComponentScan("io.migenjutsu.dependencyinjection")
+@ComponentScan("io.migenjutsu")
 public class DemoApplication {
 
 	public static void main(String[] args) {
