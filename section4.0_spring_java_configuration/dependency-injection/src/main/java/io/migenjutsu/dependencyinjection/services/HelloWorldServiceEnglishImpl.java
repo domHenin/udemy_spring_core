@@ -1,11 +1,11 @@
 package io.migenjutsu.dependencyinjection.services;
 
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
+// import org.springframework.context.annotation.Profile;
+// import org.springframework.stereotype.Component;
 
 
-@Component
-@Profile("english")
+// @Component
+// @Profile("english")
 public class HelloWorldServiceEnglishImpl implements HelloWorldService {
     @Override
     public String getGreeting() {

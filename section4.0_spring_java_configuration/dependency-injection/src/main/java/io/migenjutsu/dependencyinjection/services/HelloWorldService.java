@@ -1,8 +1,8 @@
 package io.migenjutsu.dependencyinjection.services;
 
-import org.springframework.stereotype.Component;
+// import org.springframework.stereotype.Component;
 
-@Component
+// @Component
 public interface HelloWorldService {
     public String getGreeting();
 }
