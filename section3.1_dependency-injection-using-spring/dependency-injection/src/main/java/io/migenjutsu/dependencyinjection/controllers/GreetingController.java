@@ -11,7 +11,7 @@ public class GreetingController {
 
     @Autowired
     public void setHelloWorldService(HelloWorldService helloWorldService) {
-        this.helloWorldService=helloWorldService;
+        this.helloWorldService=helloWorldService;        
     }
 
     public String sayHello() {
