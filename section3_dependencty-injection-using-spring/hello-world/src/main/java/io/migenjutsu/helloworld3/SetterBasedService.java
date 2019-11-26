@@ -8,13 +8,14 @@ public class SetterBasedService {
     private HelloWorldService helloWorldService;
 
     @Autowired
-    public void SetterBasedService(HelloWorldService helloWorldService) {
+    public void setHelloWorldService(HelloWorldService helloWorldService) {
         this.helloWorldService=helloWorldService;
     }
 
     public void getMessage() {
         helloWorldService.sayHello();
     }
+
 }
 
 
