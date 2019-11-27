@@ -6,3 +6,8 @@ public class HelloWorldServicePolishImpl implements HelloWorldService {
         return "Witaj świecie";
     }
 }
+
+    // @Override
+    // public String getGreeting() {
+    //     return "Witaj świecie";
+    // }
