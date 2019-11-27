@@ -9,3 +9,8 @@ public class HelloWorldServiceGermanImpl implements HelloWorldService {
         return "Hallo Welt";
     }
 }
+
+// @Override
+// public String getGreeting() {
+//     return "Hallo Welt";
+// }

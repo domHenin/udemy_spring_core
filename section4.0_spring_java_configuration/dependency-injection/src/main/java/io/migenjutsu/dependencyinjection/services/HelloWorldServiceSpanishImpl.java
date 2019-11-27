@@ -12,9 +12,7 @@ public class HelloWorldServiceSpanishImpl implements HelloWorldService {
     }
 }
 
-// @Component
-// @Profile("spanish")
-// @Override
-// public String getGreeting() {
-//     return "Hola Mundo";
-// }
+    // @Override
+    // public String getGreeting() {
+    //     return "Hola Mundo!";
+    // }

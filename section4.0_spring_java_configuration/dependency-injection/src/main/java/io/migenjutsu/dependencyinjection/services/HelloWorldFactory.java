@@ -1,8 +1,10 @@
 package io.migenjutsu.dependencyinjection.services;
 
+
+
 public class HelloWorldFactory {
     public HelloWorldService createHelloWorldService(String language) {
-        HelloWorldService service = null;
+        HelloWorldService service=null;
 
         switch(language) {
             case "en":
@@ -31,14 +33,13 @@ public class HelloWorldFactory {
     }
 }
 
-
     // public HelloWorldService createHelloWorldService(String language) {
     //     HelloWorldService service = null;
 
     //     switch(language) {
     //         case "en":
-    //         service=new HelloWorldServiceEnglishImpl();
-    //         break;
+    //             service=new HelloWorldServiceEnglishImpl();
+    //             break;
     //         case "es":
     //             service=new HelloWorldServiceSpanishImpl();
     //             break;
@@ -54,7 +55,9 @@ public class HelloWorldFactory {
     //         case "ru":
     //             service=new HelloWorldServiceRussianImpl();
     //             break;
-    //         default: new HelloWorldServiceEnglishImpl();
+    //         default:
+    //             service=new HelloWorldServiceEnglishImpl();
+    //             break;
     //     }
     //     return service;
     // }

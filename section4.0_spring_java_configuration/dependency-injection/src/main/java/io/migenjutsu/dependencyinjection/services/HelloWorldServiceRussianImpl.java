@@ -6,3 +6,8 @@ public class HelloWorldServiceRussianImpl implements HelloWorldService {
         return "Privet, mir";
     }
 }
+
+    // @Override
+    // public String getGreeting() {
+    //     return "Privet, mir";
+    // }
