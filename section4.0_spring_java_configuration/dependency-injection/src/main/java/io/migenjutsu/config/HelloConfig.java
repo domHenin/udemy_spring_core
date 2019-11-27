@@ -16,13 +16,13 @@ import io.migenjutsu.dependencyinjection.services.HelloWorldServiceSpanishImpl;
 
 @Configuration
 public class HelloConfig {
-
     @Bean
     public HelloWorldFactory HelloWorldFactory() {
         return new HelloWorldFactory();
     }
-    
+
     @Bean
+    @Primary
     @Profile("english")
     @Primary
     public HelloWorldService helloWorldServiceEnglishImpl(HelloWorldFactory factory) {
@@ -31,12 +31,14 @@ public class HelloConfig {
 
     @Bean
     @Profile("spanish")
+    @Primary
     public HelloWorldService helloWorldServiceSpanishImpl(HelloWorldFactory factory) {
         return factory.createHelloWorldService("es");
     }
 
-    @Bean
-    public HelloWorldService helloWorldServiceFrench(HelloWorldFactory factory) {
+
+    @Bean(name = "french")
+    public HelloWorldService helloWorldServiceFrenchImpl(HelloWorldFactory factory) {
         return factory.createHelloWorldService("fr");
     }
 
@@ -55,3 +57,20 @@ public class HelloConfig {
         return factory.createHelloWorldService("ru");
     }
 }
+
+    // @Bean
+    // public HelloWorldFactory HelloWorldFactory() {
+    //     return new HelloWorldFactory();
+    // }
+    
+    // @Bean
+    // @Profile("english")
+    // public HelloWorldService helloWorldServiceEnglishImpl(HelloWorldFactory factory) {
+    //     return new HelloWorldServiceEnglishImpl();
+    // }
+
+    // @Bean
+    // @Profile("spanish")
+    // public HelloWorldService helloWorldServiceSpanishImpl(HelloWorldFactory factory) {
+    //     return new HelloWorldServiceSpanishImpl();
+    // }
