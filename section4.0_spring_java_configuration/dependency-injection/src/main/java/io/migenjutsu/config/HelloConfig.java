@@ -24,6 +24,7 @@ public class HelloConfig {
     @Bean
     @Primary
     @Profile("english")
+    @Primary
     public HelloWorldService helloWorldServiceEnglishImpl(HelloWorldFactory factory) {
         return factory.createHelloWorldService("en");
     }
@@ -34,6 +35,7 @@ public class HelloConfig {
     public HelloWorldService helloWorldServiceSpanishImpl(HelloWorldFactory factory) {
         return factory.createHelloWorldService("es");
     }
+
 
     @Bean(name = "french")
     public HelloWorldService helloWorldServiceFrenchImpl(HelloWorldFactory factory) {
