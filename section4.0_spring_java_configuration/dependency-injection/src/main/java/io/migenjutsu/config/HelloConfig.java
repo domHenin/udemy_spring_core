@@ -2,6 +2,12 @@ package io.migenjutsu.config;
 
 
 
+import java.util.jar.Attributes.Name;
+
+
+
+// import java.lang.invoke.ClassSpecializer.Factory;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -19,7 +25,7 @@ import io.migenjutsu.dependencyinjection.services.HelloWorldServiceSpanishImpl;
 @Configuration
 public class HelloConfig {
     @Bean
-    public HelloWorldFactory helloWorldFactory() {
+    public HelloWorldFactory HelloWorldFactory() {
         return new HelloWorldFactory();
     }
 
@@ -37,7 +43,7 @@ public class HelloConfig {
         return factory.createHelloWorldService("es");
     }
 
-    @Bean(name="french")
+    @Bean(name = "french")
     public HelloWorldService helloWorldServiceFrenchImpl(HelloWorldFactory factory) {
         return factory.createHelloWorldService("fr");
     }
@@ -53,7 +59,7 @@ public class HelloConfig {
     }
 
     @Bean
-    public HelloWorldService helloWorldServiceRussianImpl(HelloWorldFactory factory) {
+    public HelloWorldService helloWorldServiceRussinanImpl(HelloWorldFactory factory) {
         return factory.createHelloWorldService("ru");
     }
 }

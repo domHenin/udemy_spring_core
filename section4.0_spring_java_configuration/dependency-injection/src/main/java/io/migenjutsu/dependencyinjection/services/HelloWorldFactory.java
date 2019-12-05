@@ -4,29 +4,26 @@ package io.migenjutsu.dependencyinjection.services;
 
 public class HelloWorldFactory {
     public HelloWorldService createHelloWorldService(String language) {
-        HelloWorldService service=null;
+        HelloWorldService service = null;
 
         switch(language) {
             case "en":
-                service=new HelloWorldServiceEnglishImpl();
+                service = new HelloWorldServiceEnglishImpl();
                 break;
             case "es":
-                service=new HelloWorldServiceSpanishImpl();
+                service = new HelloWorldServiceSpanishImpl();
                 break;
             case "fr":
-                service=new HelloWorldServiceFrenchImpl();
+                service = new HelloWorldServiceFrenchImpl();
                 break;
             case "de":
-                service=new HelloWorldServiceGermanImpl();
-                break;
-            case "pl":
-                service=new HelloWorldServicePolishImpl();
+                service = new HelloWorldServiceGermanImpl();
                 break;
             case "ru":
-                service=new HelloWorldServiceRussianImpl();
+                service = new HelloWorldServiceRussianImpl();
                 break;
             default:
-                service=new HelloWorldServiceEnglishImpl();
+                service = new HelloWorldServiceEnglishImpl();
                 break;
         }
         return service;
