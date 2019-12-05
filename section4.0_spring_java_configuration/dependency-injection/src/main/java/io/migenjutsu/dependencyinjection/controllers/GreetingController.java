@@ -7,11 +7,12 @@ import org.springframework.stereotype.Controller;
 
 import io.migenjutsu.dependencyinjection.services.HelloWorldService;
 // import io.migenjutsu.dependencyinjection.services.HelloWorldServiceGermanImpl;
+import io.migenjutsu.dependencyinjection.services.HelloWorldServiceEnglishImpl;
 
 @Controller
 public class GreetingController {
     private HelloWorldService helloWorldService;
-
+    
     private HelloWorldService helloWorldServiceGerman;
 
     private HelloWorldService helloWorldServiceFrench;
@@ -33,16 +34,15 @@ public class GreetingController {
         this.helloWorldServiceFrench = helloWorldServiceFrench;
     }
 
+
     public String sayHello() {
         String greeting = helloWorldService.getGreeting();
 
         System.out.println(greeting);
         System.out.println(helloWorldServiceGerman.getGreeting());
         System.out.println(helloWorldServiceFrench.getGreeting());
-
         return greeting;
     }
-
 }
 
     // private HelloWorldService helloWorldService;
