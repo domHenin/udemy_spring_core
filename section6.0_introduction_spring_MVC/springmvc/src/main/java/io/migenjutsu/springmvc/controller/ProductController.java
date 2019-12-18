@@ -9,7 +9,6 @@ import io.migenjutsu.springmvc.services.ProductService;
 
 @Controller
 public class ProductController {
-
     private ProductService productService;
 
     @Autowired
@@ -18,10 +17,26 @@ public class ProductController {
     }
 
     @RequestMapping("/products")
-    public String listProducts(Model model) {
+    public String listProducts(Model model){
 
         model.addAttribute("products", productService.listAllProducts());
 
         return "products";
     }
 }
+
+
+    // private ProductService productService;
+
+    // @Autowired
+    // public void setProductService(ProductService productService) {
+    //     this.productService = productService;
+    // }
+
+    // @RequestMapping("/products")
+    // public String listProducts(Model model) {
+
+    //     model.addAttribute("products", productService.listAllProducts());
+
+    //     return "products";
+    // }
