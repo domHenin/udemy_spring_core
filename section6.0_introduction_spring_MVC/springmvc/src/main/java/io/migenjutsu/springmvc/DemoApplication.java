@@ -11,3 +11,8 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 }
+
+
+// FIXES::
+// -bootstrap not being recognized: added a 'script' tag for the bootstrap webjar
+// -products page getting 'whitelabel': removing the 'DemoApplication.java' file out from the springboot directory
