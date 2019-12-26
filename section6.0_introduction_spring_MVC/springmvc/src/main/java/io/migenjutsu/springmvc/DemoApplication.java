@@ -1,4 +1,3 @@
-// package io.migenjutsu.springmvc.springboot;
 package io.migenjutsu.springmvc;
 
 import org.springframework.boot.SpringApplication;
@@ -10,6 +9,7 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
+
 }
 
 

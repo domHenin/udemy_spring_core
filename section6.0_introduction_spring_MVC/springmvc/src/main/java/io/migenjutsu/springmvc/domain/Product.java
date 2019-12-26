@@ -9,15 +9,13 @@ public class Product {
     private String imageUrl;
 
 
-    public void setId(Integer id) { this.id = id; }
-    public void setDescription(String description) { this.description = description; }
-    public void setPrice(BigDecimal price) { this.price = price; }
-    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
-
+    public void setId(Integer id) {this.id = id; }
+    public void setDescription(String description) {this.description = description; }
+    public void setPrice(BigDecimal price) {this.price = price; }
+    public void setImageUrl(String imageUrl) {this.imageUrl = imageUrl; }
 
     public Integer getId() { return id; }
     public String getDescription() { return description; }
     public BigDecimal getPrice() { return price; }
     public String getImageUrl() { return imageUrl; }
-
 }
