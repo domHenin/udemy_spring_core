@@ -10,3 +10,7 @@ public interface ProductService {
 
     Product getProductById(Integer id);
 }
+
+    // List<Product> listAllProducts();
+
+    // Product getProductById(Integer id);

@@ -32,3 +32,25 @@ public class ProductController {
         return "product";
     }
 }
+
+    // private ProductService productService;
+
+    // @Autowired
+    // public void setProductService(ProductService productService) {
+    //     this.productService = productService;
+    // }
+
+    // @RequestMapping("/products")
+    // public String listProducts(Model model){
+
+    //     model.addAttribute("products", productService.listAllProducts());
+
+    //     return "products";
+    // }
+
+    // @RequestMapping("/product/{id}")
+    // public String getProduct(@PathVariable Integer id, Model model) {
+    //     model.addAttribute("product", productService.getProductById(id));
+
+    //     return "product";
+    // }
