@@ -11,8 +11,6 @@ import java.util.Map;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
-
     private Map<Integer,Product> products;
 
     public ProductServiceImpl() {
@@ -73,8 +71,6 @@ public class ProductServiceImpl implements ProductService {
         products.put(5, product5);
     }
 }
-
-
 // import java.math.BigDecimal;
 // import java.util.ArrayList;
 // import java.util.List;
