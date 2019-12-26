@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head lang="en">
 
     <title>Spring Core Online Tutorial</title>
@@ -31,13 +32,14 @@
     <link href="../static/css/spring-core.css"
           th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
 </head> -->
+
 <body>
     <div class="container">
         <div th:if="${not #lists.isEmpty(products)}">
-            <h1 class="display-2 text-warning">Product List</h1>
-            <table id="productTable" class="table table-striped">
+            <h2>Product List</h2>
+            <table id="proudctTable" class="table table-striped">
                 <tr>
-                    <th>ID</th>
+                    <th>Id</th>
                     <th>Description</th>
                     <th>Price</th>
                     <th>Image URL</th>
@@ -48,9 +50,14 @@
                     <td th:text="${product.description}"></td>
                     <td th:text="${product.price}"></td>
                     <td th:text="${product.imageUrl}"></td>
-                    <td><a th:href="${'/product/'+product.id}">View</a></td>
+                    <td><a th:href="${'/product/' + product.id}">View</a> </td>
                 </tr>
             </table>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="/product/new">New Product</a>
+            </div>
         </div>
     </div>
 </body>
