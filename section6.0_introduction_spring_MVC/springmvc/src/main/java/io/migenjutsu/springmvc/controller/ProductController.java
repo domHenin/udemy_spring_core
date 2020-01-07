@@ -18,22 +18,19 @@ public class ProductController {
     }
 
     @RequestMapping("/products")
-    public String listProducts(Model model){
-
+    public String listProucts(Model model) {
         model.addAttribute("products", productService.listAllProducts());
 
         return "products";
     }
 
-    @RequestMapping("/product/{id}")
-    public String getProduct(@PathVariable Integer id, Model model){
+    // @RequestMapping("/product/{id}")
+    // public String getProduct(@PathVariable Integer id, Model model) {
+    //     model.addAttribute("product", productService.getProductById(id));
 
-        model.addAttribute("product", productService.getProductById(id));
-
-        return "product";
-    }
+    //     return "product";
+    // }
 }
-
 
     // private ProductService productService;
 
@@ -43,9 +40,17 @@ public class ProductController {
     // }
 
     // @RequestMapping("/products")
-    // public String listProducts(Model model) {
+    // public String listProducts(Model model){
 
     //     model.addAttribute("products", productService.listAllProducts());
 
     //     return "products";
+    // }
+
+    // @RequestMapping("/product/{id}")
+    // public String getProduct(@PathVariable Integer id, Model model){
+
+    //     model.addAttribute("product", productService.getProductById(id));
+
+    //     return "product";
     // }
