@@ -36,14 +36,15 @@
 <body>
     <div class="container">
         <div th:if="${not #lists.isEmpty(products)}">
-            <h2>Product List</h2>
+            <!-- <h2>Product List</h2> -->
+            <h1 class="text-warning">Product List</h1>
             <table id="proudctTable" class="table table-striped">
                 <tr>
-                    <th>Id</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Image URL</th>
-                    <th>List</th>
+                    <th class="text-primary">Id</th>
+                    <th class="text-primary">Description</th>
+                    <th class="text-primary">Price</th>
+                    <th class="text-primary">Image URL</th>
+                    <th class="text-primary">List</th>
                 </tr>
                 <tr th:each="product : ${products}">
                     <td th:text="${product.id}"></td>

@@ -27,6 +27,20 @@ public class ProductServiceImpl implements ProductService {
         return products.get(id);
     }
 
+    @Override
+    public Product saveOrUpdateProduct(Product product) {
+        if (product != null) {
+            if (product.getId() == null) {
+                product.setId(getNextKey());
+            }
+            products.put(product.getId(), product);
+
+            return product;
+        } else {
+            throw new RuntimeException("Product Can't be null");
+        }
+    }
+
     private void loadProducts(){
         products = new HashMap<>();
 

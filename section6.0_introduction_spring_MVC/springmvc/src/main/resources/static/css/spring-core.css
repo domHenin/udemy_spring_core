@@ -3,5 +3,6 @@ body {
 }
 
 #productTable {
-    color: #ed975a;
+    /* color: #ed975a; */
+    color: purple;
 }
