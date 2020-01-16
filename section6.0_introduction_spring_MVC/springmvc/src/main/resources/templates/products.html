@@ -45,6 +45,7 @@
                     <th class="text-primary">Price</th>
                     <th class="text-primary">Image URL</th>
                     <th class="text-primary">List</th>
+                    <th class="text-primary">Edit</th>
                 </tr>
                 <tr th:each="product : ${products}">
                     <td th:text="${product.id}"></td>
@@ -52,6 +53,7 @@
                     <td th:text="${product.price}"></td>
                     <td th:text="${product.imageUrl}"></td>
                     <td><a th:href="${'/product/' + product.id}">View</a> </td>
+                    <td><a th:href="${'/product/edit/' + product.id}">Edit</a> </td>
                 </tr>
             </table>
         </div>
